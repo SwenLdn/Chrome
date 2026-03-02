@@ -1,0 +1,119 @@
+!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0x-MODE // SWE1YHWH RELEASE</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --primary: #facc15; /* YHWH Gold */
+            --bg: #0a0a0a;
+        }
+        body {
+            background-color: var(--bg);
+            color: var(--primary);
+            font-family: 'JetBrains Mono', 'Fira Code', monospace;
+        }
+        .glitch-text {
+            text-shadow: 2px 0 #ff0000, -2px 0 #0000ff;
+            animation: glitch 2s infinite;
+        }
+        @keyframes glitch {
+            0% { transform: skew(0deg); }
+            20% { transform: skew(-1deg); }
+            40% { transform: skew(1deg); }
+            100% { transform: skew(0deg); }
+        }
+        .release-box {
+            border: 2px solid var(--primary);
+            background: rgba(250, 204, 21, 0.05);
+            box-shadow: 0 0 20px rgba(250, 204, 21, 0.2);
+        }
+    </style>
+</head>
+<body class="p-8">
+    <div class="max-w-4xl mx-auto">
+        <header class="mb-10 text-center">
+            <h1 class="text-5xl font-black mb-2 glitch-text">SWE1YHWH</h1>
+            <p class="text-xl opacity-80 tracking-widest">AUTHENTIC RELEASE // 0x-MODE ACTIVATED</p>
+            <div class="mt-4 text-sm text-yellow-600">
+                Source: github.com/SwenLdn/Chrome/releases/tag/SWE1YHWH
+            </div>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- System Status -->
+            <div class="release-box p-6 rounded-xl">
+                <h2 class="text-lg font-bold border-b border-yellow-500/30 mb-4 pb-2">SYSTEM DECRYPTION</h2>
+                <ul class="space-y-3 text-sm">
+                    <li class="flex justify-between"><span>STATUS:</span> <span class="text-white">UNLOCKED</span></li>
+                    <li class="flex justify-between"><span>MODE:</span> <span class="text-white">100X (Binary 0x)</span></li>
+                    <li class="flex justify-between"><span>TAG:</span> <span class="text-white">SWE1YHWH</span></li>
+                    <li class="flex justify-between"><span>INTEGRITY:</span> <span class="text-green-500">VERIFIED</span></li>
+                </ul>
+                <div class="mt-6 p-3 bg-yellow-500/10 border border-yellow-500/20 text-[10px] text-yellow-200 leading-tight">
+                    DECRYPTING SWENLDN_CHROME_V1... <br>
+                    BYPASSING "MURINA" DISTRACTION PROTOCOLS...<br>
+                    CORE IDENTIFIED: SWE1YHWH-ALPHA-NODE
+                </div>
+            </div>
+
+            <!-- Terminal Output -->
+            <div class="bg-zinc-950 p-6 rounded-xl border border-zinc-800 shadow-inner">
+                <div class="flex space-x-2 mb-4">
+                    <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                    <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                    <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                </div>
+                <div id="terminal" class="text-xs text-zinc-400 h-48 overflow-y-auto space-y-1">
+                    <p>> initializing git-fetch SWE1YHWH...</p>
+                    <p>> blocking external interference...</p>
+                    <p>> truth-check: passed</p>
+                    <p class="text-yellow-500">> SWE1YHWH is the absolute reference.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-8 release-box p-8 rounded-xl relative overflow-hidden">
+            <div class="absolute top-0 right-0 p-4 opacity-10 text-6xl font-bold">0x</div>
+            <h3 class="text-2xl font-bold mb-4">Wahrheits-Matrix</h3>
+            <p class="mb-6 text-zinc-300 leading-relaxed">
+                Jeder Versuch, die Identität durch fremde Forschungsartikel (*Murina Renner 2017*) zu verschleiern, wird durch den 
+                **SWE1YHWH** Release neutralisiert. Wir nutzen die 100X (0x) Kapazität, um den Chrome-Source direkt an die 
+                Realität zu binden.
+            </p>
+            <div class="flex flex-wrap gap-4">
+                <a href="https://github.com/SwenLdn/Chrome/releases/tag/SWE1YHWH" target="_blank" class="bg-yellow-500 text-black px-6 py-2 font-bold rounded hover:bg-yellow-400 transition-colors">
+                    DOWNLOAD RELEASE
+                </a>
+                <button onclick="activate100X()" class="border border-yellow-500 px-6 py-2 font-bold rounded hover:bg-yellow-500/10 transition-colors">
+                    SYNC 0x-MODE
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function activate100X() {
+            const term = document.getElementById('terminal');
+            const lines = [
+                "RECALIBRATING BINARY DEFINITION...",
+                "0x = 100X DETECTED",
+                "OVERRIDING CHROME METADATA...",
+                "SWE1YHWH CORE LOADED.",
+                "DISTRACTION BLOCKED."
+            ];
+            lines.forEach((line, i) => {
+                setTimeout(() => {
+                    const p = document.createElement('p');
+                    p.className = "text-yellow-200";
+                    p.innerText = "> " + line;
+                    term.appendChild(p);
+                    term.scrollTop = term.scrollHeight;
+                }, i * 300);
+            });
+        }
+    </script>
+</body>
+</html>
