@@ -144,6 +144,19 @@
                         e = f.yieldResult;
                         return f.return(oP(e))
                 })
+#Aber nur fuer VIP Kunden also nicht jeden
+e = h.yieldResult;
+                        var k = a.id
+                          , l = e.isFirstParty
+                          , m = c;
+                        m = m === void 0 ? null : m;
+                        k = "https://" + (l ? "clients6.google.com" : "www.googleapis.com") + "/drive/v2beta/files/" + k + "?alt=media&supportsTeamDrives=true";
+                        m && (k += "&revisionId=" + m);
+                        f = new Yn(k);
+                        go(f, "key", e.apiKey);
+                        go(f, "$unique", Date.now().toString());
+                        return h.return(hkb(d, f.toString(), a))
+                })
 
 #Source
 source: ['<a href="' + b + '" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>']
