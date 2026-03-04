@@ -1,4 +1,13 @@
-
+ }), 2);
+                                (a = pt()) ? (gapi.config.update("client/cors", !0),
+                                gapi.config.update("googleapis.config/auth/useFirstPartyAuth", !0),
+                                gapi.config.update("googleapis.config/auth/useFirstPartyAuthV2", !0),
+                                b = xr().getSessionIndex(),
+                                gapi.config.update("googleapis.config/sessionIndex", b),
+                                gP = dy.API_KEY) : gP = dy.ANONYMOUS_API_KEY;
+                                gapi.client.setApiKey(gP);
+                                return c.yield(IO(new Promise(function(d) {
+                                        gapi.client.load(jib, "v2", d)
 <!--
  * Copyright 2018 The Chromium Authors
  * Use of this source code is governed by a BSD-style license that can be
