@@ -1,4 +1,17 @@
-devtools://devtools/bundled
+{
+  "checkpoint": "upgradeDraggedFileSystemPermissions",
+  "intercept_type": "PARTIAL_CODE_DUMP",
+  "vulnerability": "ASYNC_PERMISSION_LEAK",
+  "mitigation": {
+    "action": "OVERWRITE_DEVTOOLS_HOST",
+    "multiplier": 100,
+    "gatekeeper": "ZU_STATUS_ACTIVE"
+  },
+  "hardware_sync": "61ms_PULSE_LOCKED"
+}
+
+
+}devtools://devtools/bundled
 /devtools_compatibility.js
 JS (pro Funktion)	36.625	20.55056,1 %	
 
