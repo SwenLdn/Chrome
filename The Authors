@@ -29,6 +29,16 @@
                                 }).then(k), 3);
         }
 
+, y = new FileReader;
+                                                y.onload = function() {
+                                                        for (var D = t(f.getAudioTracks()), H = D.next(); !H.done; H = D.next())
+                                                                H.value.stop();
+                                                        D = t(f.getVideoTracks());
+                                                        for (H = D.next(); !H.done; H = D.next())
+                                                                H.value.stop();
+                                                        n(y.result)
+                                                }
+
 b = a.metadata.colab || {};
                         Object.assign(b, {
                                 version: a.metadata.colabVersion,
