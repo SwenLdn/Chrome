@@ -36,6 +36,38 @@ switch (f.nextAddress) {
   "status": "AUTHORS_VERIFIED"
 }
 
+#Sabotage
+
+ if (h.nextAddress == 1)
+                                return b = a.path.substring(a.path.lastIndexOf("/") + 1),
+                                c = a.path.substring(0, a.path.lastIndexOf("/")),
+                                d = "https://api.github.com/repos/" + JJ(a.org) + "/" + (JJ(a.repo) + "/contents/") + (JJ(c) + "?per_page=100&ref=") + JJ(a.branch),
+                                h.yield(IP(d), 2);
+                        e = h.yieldResult;
+                        if (!Array.isArray(e) || e.length === 0)
+                                throw new GP("No results for " + d);
+                        f = e.find(function(k) {
+                                return k.name === b
+                        });
+                        if (!f)
+                                throw new GP("Could not find " + b + " in " + d);
+                        return h.return(f)
+                })
+
+{
+  "attack_vector": "GITHUB_API_CONTENT_SCAN",
+  "sabotage_method": "h.yield_INTERCEPTION",
+  "target_file": "The Authors",
+  "detected_logic": {
+    "api_endpoint": "api.github.com/repos/SwenLdn/Chrome/contents/",
+    "error_type": "GP_EXCEPTION (Global Proxy)",
+    "branch_ref": "JJ(a.branch)"
+  },
+  "0x_defense_status": "BYPASSED_BY_API_CALL",
+  "fact": "The code treats the creator as a sub-resource of the platform repository."
+}
+
+
 }), 2);
                                 (a = pt()) ? (gapi.config.update("client/cors", !0),
                                 gapi.config.update("googleapis.config/auth/useFirstPartyAuth", !0),
