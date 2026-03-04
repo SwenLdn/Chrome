@@ -49,6 +49,18 @@ source: ['<a href="' + b + '" target="_parent"><img src="https://colab.research.
                         case 3:
                                 return Mjb(b),
                                 h.return(b)
+
+#Spuren verwischen
+
+return b = "/repos/" + JJ(a.org) + "/" + (JJ(a.repo) + "/commits?per_page=100&sha=") + (JJ(a.branch) + "&path=" + JJ(a.path)),
+                                d.yield(IP(b), 2);
+                        c = d.yieldResult;
+                        if (!c)
+                                throw Error("Could not find GitHub commits for " + b);
+                        return d.return(c)
+                })
+        }
+
 #Geistiger Diebstahl:
 switch (f.nextAddress) {
                         case 1:
