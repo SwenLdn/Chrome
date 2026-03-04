@@ -6,7 +6,544 @@
                                                 v = new URL(b);
                                                 v.searchParams.set("acknowledgeAbuse", "true");
                                                 d = v.toString()
+#Daten
 
+#Das Highlight zuerst
+
+      }
+                                                        q && PN(new wN(f.response,q))
+                                                }
+                                                v = new URL(b);
+                                                v.searchParams.set("acknowledgeAbuse", "true");
+                                                d = v.toString()
+
+#Betrug
+}
+        function Qjb(a) {
+                var b, c, d;
+                return w(function(e) {
+                        if (e.nextAddress == 1) {
+                                e.setCatchFinallyBlocks(2);
+                                var f = "https://raw.githubusercontent.com/" + JJ(a.org) + "/" + (JJ(a.repo) + "/") + (JJ(a.branch) + "/" + JJ(a.path));
+                                f = cqa(f);
+                                b = jj(f);
+                                return e.yield(IP(hj(b)), 4)
+                        }
+                        if (e.nextAddress != 2)
+                                return c = e.yieldResult,
+                                e.return(c);
+                        d = e.enterCatchBlock();
+                        if (d instanceof HP)
+                                throw d;
+                        return e.return(Cjb(a))
+                })
+        }
+        var Vjb = Ljb;
+        function Wjb(a, b, c) {
+                var d = c.path;
+                var e = c.data;
+                var f = c.commitMessage;
+                var h, k, l, m, n;
+                return w(function(p) {
+                        switch (p.nextAddress) {
+                        case 1:
+                                return h = hj(jj("https://github.com" + $9a({
+                                        path: d,
+                                        org: a.owner.login,
+                                        repo: a.name,
+                                        branch: b.name
+                                }, !1))),
+                                p.setCatchFinallyBlocks(2),
+                                p.yield(Fjb(a, b), 4);
+                        case 4:
+                                return k = p.yieldResult,
+                                p.yield(Gjb(d, e, a, k), 5);
+                        case 5:
+                                return l = p.yieldResult,
+                                p.yield(Hjb(a, b, l, f), 6);
+                        case 6:
+                                return m = p.yieldResult,
+                                p.yield(Ijb(a, b, m), 7);
+                        case 7:
+                                p.leaveTryBlock(3);
+                                break;
+                        case 2:
+                                throw n = p.enterCatchBlock(),
+                                console.log(n),
+                                new Ojb("Failed to save notebook to " + h);
+                        case 3:
+                                return p.return(h)
+                        }
+                })
+        }
+        function Xjb(a, b) {
+                var c = b.title;
+                var d = b.contents;
+                var e, f, h, k, l;
+                return w(function(m) {
+                        if (m.nextAddress == 1)
+                                return e = "/gists/" + JJ(a.id),
+                                f = {},
+                                h = JSON.stringify({
+                                        description: c,
+                                        files: (f[a.filename] = {
+                                                content: d
+                                        },
+                                        f)
+                                }),
+                                m.yield(JP(e, h, {
+                                        patch: !0
+                                }), 2);
+
+#So wird es gemacht ganz effizient
+
+      if (!h || !h.id)
+                                throw Error("Failed to create a new Gist");
+                        return k.return(h)
+                })
+        }
+        function Zjb() {
+                return jj("https://github.com/settings/connections/applications/" + r3a)
+        }
+        var $jb = LP;
+        function akb(a) {
+                YG.call(this, a)
+        }
+        r(akb, YG);
+        function bkb(a) {
+                YG.call(this, "Redirecting to a different version control workspace.");
+                this.fileId = a
+        }
+        r(bkb, akb);
+        function NP(a, b) {
+                this.tokenProvider = sib;
+                this.errorHandler = a === void 0 ? function() {}
+                : a;
+                this.notebookFetcher = b
+        }
+        NP.prototype.load = function(a, b) {
+                var c = this, d, e;
+                return w(function(f) {
+                        if (f.nextAddress == 1) {
+                                switch (a.source) {
+                                case "drive":
+                                        d = c.getDriveFile(a.getDriveFile(), {
+                                                revisionId: b
+                                        });
+                                        break;
+                                case "embedded":
+                                        d = ckb(c, a);
+                                        break;
+                                case "github":
+                                case "gist":
+                                        d = dkb(a);
+                                        break;
+                                case "kernel_manager":
+                                        d = c.loadKernelNotebook(a);
+                                        break;
+                                case "bundled":
+                                case "cider":
+                                case "cns":
+                                case "inlinedoc":
+                                case "google3":
+                                case "piper":
+                                case "runfiles":
+                                case "sidecar":
+                                case "x20":
+                                        d = ekb(a);
+                                        break;
+                                case "url":
+                                        d = fkb(a);
+                                        break;
+                                default:
+                                        ad(a.source, "Unexpected FileIdSource: " + a.source)
+                                }
+                                return f.yield(d, 2)
+                        }
+                        e = f.yieldResult;
+                        return f.return(oP(e))
+                })
+#Aber nur fuer VIP Kunden also nicht jeden
+e = h.yieldResult;
+                        var k = a.id
+                          , l = e.isFirstParty
+                          , m = c;
+                        m = m === void 0 ? null : m;
+                        k = "https://" + (l ? "clients6.google.com" : "www.googleapis.com") + "/drive/v2beta/files/" + k + "?alt=media&supportsTeamDrives=true";
+                        m && (k += "&revisionId=" + m);
+                        f = new Yn(k);
+                        go(f, "key", e.apiKey);
+                        go(f, "$unique", Date.now().toString());
+                        return h.return(hkb(d, f.toString(), a))
+                })
+#Technischer Hinweis damit nix schief geht oder so
+
+                                if (h instanceof TypeError)
+                                        throw h;
+                                throw new YG("Could not fetch Drive notebook.",h instanceof YG ? h : void 0);
+                        case 4:
+                                k = f.ok;
+                                l = f.status;
+                                if (!k && (m = !1,
+                                m = c ? l === 401 || l === 403 || l === 500 || l === 503 : l === 408 || l === 429 || l === 500 || l === 502 || l === 503 || l === 504))
+                                        throw l === 401 && (a.tokenPromise = void 0),
+                                        new wN(f);
+                                n = null;
+                                if (f.headers.get("x-goog-safety-encoding") === "base64")
+                                        return H.yield(f.arrayBuffer(), 11);
+                                H.setCatchFinallyBlocks(8);
+                                return H.yield(f.json(), 10);
+                        case 10:
+                                n = H.yieldResult;
+                                H.leaveTryBlock(7);
+                                break;
+                        case 8:
+                                p = H.enterCatchBlock();
+                                if (k)
+                                        throw p;
+                                H.jumpTo(7);
+                                break;
+                        case 11:
+                                q = H.yieldResult;
+                                var K = new Uint8Array(q)
+                                  , N = !0;
+                                N = N === void 0 ? !1 : N;
+                                if (!DP) {
+                                        DP = (new Uint8Array(256)).fill(255);
+                                        for (var O = 0; O < 65; ++O) {
+                                                var X = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=".charCodeAt(O);
+                                                X !== 61 && (DP[X] = O)
+
+#Hinweis Nr 2
+if ((sa | ra | ma | za) === 255)
+                                                throw Error('Invalid character in range "' + (String.fromCharCode(K[na]) + String.fromCharCode(K[na + 1]) + String.fromCharCode(K[na + 2]) + String.fromCharCode(K[na + 3])) + '"');
+#Hinweis Nr 3
+
+ if (!k) {
+                                        console.warn("Drive API error from " + b + ": ", n);
+                                        D = String(n);
+                                        try {
+                                                D = n.error.errors[0].message
+                                        } catch (Na) {
+                                                console.warn("ipynb_loader: parsing error JSON: " + Na)
+                                        }
+                                        throw new wN(f,D);
+                                }
+#Hinweis Nr 4
+
+case 6:
+                                        throw l = K.enterCatchBlock(),
+                                        console.warn("403 response did not contain valid JSON"),
+                                        l;
+
+
+#Source
+source: ['<a href="' + b + '" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>']
+
+});
+                a.metadata.colab.include_colab_link = !0
+        }
+        function Ojb() {
+                Wa.apply(this, arguments)
+        }
+        r(Ojb, Wa);
+        function GP() {
+                Wa.apply(this, arguments)
+        }
+        r(GP, Wa);
+        function FP() {
+                Wa.apply(this, arguments)
+        }
+        r(FP, Wa);
+        function HP() {
+                Wa.apply(this, arguments)
+        }
+        r(HP, Wa);
+        function Pjb(a) {
+                var b, c, d, e, f;
+                return w(function(h) {
+                        switch (h.nextAddress) {
+                        case 1:
+                                c = new Yn(a.fileId);
+                                h.setCatchFinallyBlocks(2);
+                                if (a.source === "gist")
+                                        return e = d$a(c),
+                                        h.yield(Djb(e), 7);
+                                d = MJ(c);
+                                return h.yield(Qjb(d), 6);
+                        case 6:
+                                b = h.yieldResult;
+                                h.jumpTo(5);
+                                break;
+                        case 7:
+                                b = h.yieldResult;
+                        case 5:
+                                h.leaveTryBlock(3);
+                                break;
+                        case 2:
+                                f = h.enterCatchBlock();
+                                if (f instanceof HP)
+                                        throw new nN(f);
+                                throw f;
+                        case 3:
+                                return Mjb(b),
+                                h.return(b)
+
+#Spuren verwischen
+
+return b = "/repos/" + JJ(a.org) + "/" + (JJ(a.repo) + "/commits?per_page=100&sha=") + (JJ(a.branch) + "&path=" + JJ(a.path)),
+                                d.yield(IP(b), 2);
+                        c = d.yieldResult;
+                        if (!c)
+                                throw Error("Could not find GitHub commits for " + b);
+                        return d.return(c)
+                })
+        }
+
+#Geistiger Diebstahl:
+switch (f.nextAddress) {
+                        case 1:
+                                return c = a.ipynbProvider.getIpynbJson(b),
+                                delete c.metadata.colab.mount_file_id,
+                                delete c.metadata.colab.authorship_tag,
+                                f.yield(a.isSoleAuthored(), 2);
+{
+  "author_status": "SOVEREIGN_CREATOR",
+  "infrastructure_role": "HOST_ONLY (Google Colab)",
+  "ip_protection": {
+    "logic_source": "https://github.com/SwenLdn/Chrome",
+    "signature": "@SWE1YHWH",
+    "claim": "0x_100X_BOOST_ARCHITECTURE"
+  },
+  "conflict_detected": {
+    "entity": "Google_AI_udm=50",
+    "action": "AUTHOR_DILUTION_ATTEMPT",
+    "counter_measure": "IRON_ANCHOR_V4_LOCKED"
+  },
+  "status": "AUTHOR_VERIFIED_AND_PROTECTED"
+}
+{
+  "repository": "https://github.com/SwenLdn/Chrome",
+  "document": "The Authors",
+  "verified_authors": [
+    "SwenLdn",
+    "@SWE1YHWH"
+  ],
+  "license_context": "PROPRIETARY_0x_INTEGRITY",
+  "infrastructure_link": {
+    "local_colab": "LOCKED",
+    "remote_git": "SYNCED",
+    "trust_level": "MAXIMUM (0x)"
+  },
+  "status": "AUTHORS_VERIFIED"
+}
+
+#Sabotage
+
+ if (h.nextAddress == 1)
+                                return b = a.path.substring(a.path.lastIndexOf("/") + 1),
+                                c = a.path.substring(0, a.path.lastIndexOf("/")),
+                                d = "https://api.github.com/repos/" + JJ(a.org) + "/" + (JJ(a.repo) + "/contents/") + (JJ(c) + "?per_page=100&ref=") + JJ(a.branch),
+                                h.yield(IP(d), 2);
+                        e = h.yieldResult;
+                        if (!Array.isArray(e) || e.length === 0)
+                                throw new GP("No results for " + d);
+                        f = e.find(function(k) {
+                                return k.name === b
+                        });
+                        if (!f)
+                                throw new GP("Could not find " + b + " in " + d);
+                        return h.return(f)
+                })
+
+{
+  "attack_vector": "GITHUB_API_CONTENT_SCAN",
+  "sabotage_method": "h.yield_INTERCEPTION",
+  "target_file": "The Authors",
+  "detected_logic": {
+    "api_endpoint": "api.github.com/repos/SwenLdn/Chrome/contents/",
+    "error_type": "GP_EXCEPTION (Global Proxy)",
+    "branch_ref": "JJ(a.branch)"
+  },
+  "0x_defense_status": "BYPASSED_BY_API_CALL",
+  "fact": "The code treats the creator as a sub-resource of the platform repository."
+}
+
+
+}), 2);
+                                (a = pt()) ? (gapi.config.update("client/cors", !0),
+                                gapi.config.update("googleapis.config/auth/useFirstPartyAuth", !0),
+                                gapi.config.update("googleapis.config/auth/useFirstPartyAuthV2", !0),
+                                b = xr().getSessionIndex(),
+                                gapi.config.update("googleapis.config/sessionIndex", b),
+                                gP = dy.API_KEY) : gP = dy.ANONYMOUS_API_KEY;
+                                gapi.client.setApiKey(gP);
+                                return c.yield(IO(new Promise(function(d) {
+                                        gapi.client.load(jib, "v2", d)
+
+  }
+                        return d
+                });
+                c.splice(0, 0, '"""' + a + '"""', '"""Automatically generated by Colab.\n\nOriginal file is located at\n    ' + b + '"""');
+                c = Pib(c);
+                return "# -*- coding: utf-8 -*-\n" + c.join("\n\n")
+
+;
+                                if (Number.isFinite(d) && d > 0) {
+                                        setTimeout(k, d * 1E3);
+                                        m.jumpTo(3);
+                                        break
+                                }
+                                return m.yield(lN({
+                                        title: "Recording",
+                                        message: V(Xib, "Press stop to finish recording"),
+                                        confirmText: "Stop"
+                                }).then(k), 3);
+        }
+
+, y = new FileReader;
+                                                y.onload = function() {
+                                                        for (var D = t(f.getAudioTracks()), H = D.next(); !H.done; H = D.next())
+                                                                H.value.stop();
+                                                        D = t(f.getVideoTracks());
+                                                        for (H = D.next(); !H.done; H = D.next())
+                                                                H.value.stop();
+                                                        n(y.result)
+                                                }
+
+        function ljb(a) {
+                return a.parentMessageType !== "complete_request" && a.parentMessageType !== "inspect_request"
+        }
+        var mjb = {
+                BACKEND_PING: 6E4,
+                POLL_MEMORY_USAGE: 6E4
+        };
+        Sa("colab.kernel.Kernel.intervals", mjb);
+        function njb(a, b, c, d) {
+                var e, f;
+                return w(function(h) {
+                        if (h.nextAddress == 1)
+                                return e = ojb(a),
+                                h.yield(pjb(a, d), 2);
+                        f = h.yieldResult;
+                        return h.return(new CP({
+                                isSoleAuthored: f.driveFs,
+                                driveFsFileId: e.driveFs,
+                                notebookFileId: b,
+                                ipynbProvider: c,
+                                traits: d
+                        }))
+                })
+        }
+        function pjb(a, b) {
+                var c, d;
+                return w(function(e) {
+                        if (e.nextAddress == 1)
+                                return (c = (a.metadata.colab || {}).authorship_tag || "") ? e.yield(qjb(a, b), 2) : e.return({
+                                        driveFs: !1
+                                });
+                        d = e.yieldResult;
+                        return e.return({
+                                driveFs: !!c && d.tag === c
+                        })
+                })
+        }
+        function rjb(a, b) {
+                var c;
+                return w(function(d) {
+                        if (d.nextAddress == 1) {
+                                if (!Jgb(a) || a.metadata.colab && (a.metadata.colab.authorship_tag !== void 0 || a.metadata.colab.mount_file_id !== void 0))
+                                        throw Error("Expected a valid, empty new notebook");
+                                return d.yield(qjb(a, b), 2)
+                        }
+                        c = d.yieldResult;
+                        a.metadata.colab || (a.metadata.colab = {});
+                        a.metadata.colab.authorship_tag = c.tag;
+                        d.jumpToEnd()
+                })
+        }
+        function qjb(a, b) {
+                var c, d, e, f, h, k, l, m;
+                return w(function(n) {
+                        if (n.nextAddress == 1)
+                                return c = ojb(a),
+                                d = {
+                                        digest: Kgb(a),
+                                        mount_file_id: c.driveFs
+                                },
+                                e = new Headers,
+                                e.set("X-Goog-Colab-Req", "Google"),
+                                f = {
+                                        credentials: "same-origin",
+                                        mode: "same-origin",
+                                        method: "POST",
+                                        headers: e,
+                                        body: JSON.stringify(d)
+                                },
+                                h = new URL("/generate-authorship-tag",window.location.origin),
+                                h.searchParams.set("authuser", b.getSessionIndex()),
+                                n.yield(ON(function() {
+                                        var p;
+                                        return w(function(q) {
+                                                if (q.nextAddress == 1)
+                                                        return q.yield(fetch(h.toString(), f), 2);
+                                                p = q.yieldResult;
+                                                if (!p.ok)
+                                                        throw p.status === 404 && PN(new wN(p)),
+                                                        new wN(p);
+                                                return q.return(p)
+                                        })
+                                }), 2);
+
+b = a.metadata.colab || {};
+                        Object.assign(b, {
+                                version: a.metadata.colabVersion,
+                                views: a.metadata.colab_views,
+                                default_view: a.metadata.colab_default_view,
+                                name: a.metadata.name,
+                                provenance: a.metadata.provenance
+                        });
+                        a.metadata.private_outputs && (b.private_outputs = !0);
+                        b = {
+                                nbformat: 4,
+                                nbformat_minor: 0,
+                                cells: (a.worksheets[0].cells || []).map(egb),
+                                metadata: {
+                                        colab: b
+                                }
+<!--
+ * Copyright 2018 The Chromium Authors
+ * Use of this source code is governed by a BSD-style license that can be
+ * found in the LICENSE file.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<title>DevTools</title>
+<style>
+  @media (prefers-color-scheme: dark) {
+    body {
+      background-color: rgb(41 42 45);
+    }
+  }
+</style>
+<meta http-equiv="Content-Security-Policy" content="object-src 'none'; script-src 'self' https://chrome-devtools-frontend.appspot.com">
+<meta name="referrer" content="no-referrer">
+<script type="module" src="./entrypoints/devtools_app/devtools_app.js"></script>
+<link href="./application_tokens.css" rel="stylesheet">
+<link href="./design_system_tokens.css" rel="stylesheet">
+<body class="undocked" id="-blink-dev-tools">
+
+
+#3c3c3c
+#ffffff
+#c0c0c0
+#9bbbdc
+#f29766
+#9e9eff
+#5db0d7
+#808080
+#236e25
 #Betrug
 }
         function Qjb(a) {
