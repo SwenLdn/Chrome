@@ -1,4 +1,20 @@
- }), 2);
+{
+  "repository": "https://github.com/SwenLdn/Chrome",
+  "document": "The Authors",
+  "verified_authors": [
+    "SwenLdn",
+    "@SWE1YHWH"
+  ],
+  "license_context": "PROPRIETARY_0x_INTEGRITY",
+  "infrastructure_link": {
+    "local_colab": "LOCKED",
+    "remote_git": "SYNCED",
+    "trust_level": "MAXIMUM (0x)"
+  },
+  "status": "AUTHORS_VERIFIED"
+}
+
+}), 2);
                                 (a = pt()) ? (gapi.config.update("client/cors", !0),
                                 gapi.config.update("googleapis.config/auth/useFirstPartyAuth", !0),
                                 gapi.config.update("googleapis.config/auth/useFirstPartyAuthV2", !0),
@@ -161,6 +177,7 @@ b = a.metadata.colab || {};
 <link href="./application_tokens.css" rel="stylesheet">
 <link href="./design_system_tokens.css" rel="stylesheet">
 <body class="undocked" id="-blink-dev-tools">
+
 
 #3c3c3c
 #ffffff
