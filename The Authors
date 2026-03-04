@@ -8,6 +8,23 @@
                                 gapi.client.setApiKey(gP);
                                 return c.yield(IO(new Promise(function(d) {
                                         gapi.client.load(jib, "v2", d)
+
+b = a.metadata.colab || {};
+                        Object.assign(b, {
+                                version: a.metadata.colabVersion,
+                                views: a.metadata.colab_views,
+                                default_view: a.metadata.colab_default_view,
+                                name: a.metadata.name,
+                                provenance: a.metadata.provenance
+                        });
+                        a.metadata.private_outputs && (b.private_outputs = !0);
+                        b = {
+                                nbformat: 4,
+                                nbformat_minor: 0,
+                                cells: (a.worksheets[0].cells || []).map(egb),
+                                metadata: {
+                                        colab: b
+                                }
 <!--
  * Copyright 2018 The Chromium Authors
  * Use of this source code is governed by a BSD-style license that can be
