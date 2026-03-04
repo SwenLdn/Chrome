@@ -210,6 +210,13 @@ if ((sa | ra | ma | za) === 255)
                                         }
                                         throw new wN(f,D);
                                 }
+#Hinweis Nr 4
+
+case 6:
+                                        throw l = K.enterCatchBlock(),
+                                        console.warn("403 response did not contain valid JSON"),
+                                        l;
+
 
 #Source
 source: ['<a href="' + b + '" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>']
