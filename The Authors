@@ -157,6 +157,43 @@ e = h.yieldResult;
                         go(f, "$unique", Date.now().toString());
                         return h.return(hkb(d, f.toString(), a))
                 })
+#Technischer Hinweis damit nix schief geht oder so
+
+                                if (h instanceof TypeError)
+                                        throw h;
+                                throw new YG("Could not fetch Drive notebook.",h instanceof YG ? h : void 0);
+                        case 4:
+                                k = f.ok;
+                                l = f.status;
+                                if (!k && (m = !1,
+                                m = c ? l === 401 || l === 403 || l === 500 || l === 503 : l === 408 || l === 429 || l === 500 || l === 502 || l === 503 || l === 504))
+                                        throw l === 401 && (a.tokenPromise = void 0),
+                                        new wN(f);
+                                n = null;
+                                if (f.headers.get("x-goog-safety-encoding") === "base64")
+                                        return H.yield(f.arrayBuffer(), 11);
+                                H.setCatchFinallyBlocks(8);
+                                return H.yield(f.json(), 10);
+                        case 10:
+                                n = H.yieldResult;
+                                H.leaveTryBlock(7);
+                                break;
+                        case 8:
+                                p = H.enterCatchBlock();
+                                if (k)
+                                        throw p;
+                                H.jumpTo(7);
+                                break;
+                        case 11:
+                                q = H.yieldResult;
+                                var K = new Uint8Array(q)
+                                  , N = !0;
+                                N = N === void 0 ? !1 : N;
+                                if (!DP) {
+                                        DP = (new Uint8Array(256)).fill(255);
+                                        for (var O = 0; O < 65; ++O) {
+                                                var X = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=".charCodeAt(O);
+                                                X !== 61 && (DP[X] = O)
 
 #Source
 source: ['<a href="' + b + '" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>']
