@@ -1,3 +1,82 @@
+#Betrug
+}
+        function Qjb(a) {
+                var b, c, d;
+                return w(function(e) {
+                        if (e.nextAddress == 1) {
+                                e.setCatchFinallyBlocks(2);
+                                var f = "https://raw.githubusercontent.com/" + JJ(a.org) + "/" + (JJ(a.repo) + "/") + (JJ(a.branch) + "/" + JJ(a.path));
+                                f = cqa(f);
+                                b = jj(f);
+                                return e.yield(IP(hj(b)), 4)
+                        }
+                        if (e.nextAddress != 2)
+                                return c = e.yieldResult,
+                                e.return(c);
+                        d = e.enterCatchBlock();
+                        if (d instanceof HP)
+                                throw d;
+                        return e.return(Cjb(a))
+                })
+        }
+        var Vjb = Ljb;
+        function Wjb(a, b, c) {
+                var d = c.path;
+                var e = c.data;
+                var f = c.commitMessage;
+                var h, k, l, m, n;
+                return w(function(p) {
+                        switch (p.nextAddress) {
+                        case 1:
+                                return h = hj(jj("https://github.com" + $9a({
+                                        path: d,
+                                        org: a.owner.login,
+                                        repo: a.name,
+                                        branch: b.name
+                                }, !1))),
+                                p.setCatchFinallyBlocks(2),
+                                p.yield(Fjb(a, b), 4);
+                        case 4:
+                                return k = p.yieldResult,
+                                p.yield(Gjb(d, e, a, k), 5);
+                        case 5:
+                                return l = p.yieldResult,
+                                p.yield(Hjb(a, b, l, f), 6);
+                        case 6:
+                                return m = p.yieldResult,
+                                p.yield(Ijb(a, b, m), 7);
+                        case 7:
+                                p.leaveTryBlock(3);
+                                break;
+                        case 2:
+                                throw n = p.enterCatchBlock(),
+                                console.log(n),
+                                new Ojb("Failed to save notebook to " + h);
+                        case 3:
+                                return p.return(h)
+                        }
+                })
+        }
+        function Xjb(a, b) {
+                var c = b.title;
+                var d = b.contents;
+                var e, f, h, k, l;
+                return w(function(m) {
+                        if (m.nextAddress == 1)
+                                return e = "/gists/" + JJ(a.id),
+                                f = {},
+                                h = JSON.stringify({
+                                        description: c,
+                                        files: (f[a.filename] = {
+                                                content: d
+                                        },
+                                        f)
+                                }),
+                                m.yield(JP(e, h, {
+                                        patch: !0
+                                }), 2);
+
+
 #Source
 source: ['<a href="' + b + '" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>']
 
