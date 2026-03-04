@@ -39,6 +39,90 @@
                                                         n(y.result)
                                                 }
 
+        function ljb(a) {
+                return a.parentMessageType !== "complete_request" && a.parentMessageType !== "inspect_request"
+        }
+        var mjb = {
+                BACKEND_PING: 6E4,
+                POLL_MEMORY_USAGE: 6E4
+        };
+        Sa("colab.kernel.Kernel.intervals", mjb);
+        function njb(a, b, c, d) {
+                var e, f;
+                return w(function(h) {
+                        if (h.nextAddress == 1)
+                                return e = ojb(a),
+                                h.yield(pjb(a, d), 2);
+                        f = h.yieldResult;
+                        return h.return(new CP({
+                                isSoleAuthored: f.driveFs,
+                                driveFsFileId: e.driveFs,
+                                notebookFileId: b,
+                                ipynbProvider: c,
+                                traits: d
+                        }))
+                })
+        }
+        function pjb(a, b) {
+                var c, d;
+                return w(function(e) {
+                        if (e.nextAddress == 1)
+                                return (c = (a.metadata.colab || {}).authorship_tag || "") ? e.yield(qjb(a, b), 2) : e.return({
+                                        driveFs: !1
+                                });
+                        d = e.yieldResult;
+                        return e.return({
+                                driveFs: !!c && d.tag === c
+                        })
+                })
+        }
+        function rjb(a, b) {
+                var c;
+                return w(function(d) {
+                        if (d.nextAddress == 1) {
+                                if (!Jgb(a) || a.metadata.colab && (a.metadata.colab.authorship_tag !== void 0 || a.metadata.colab.mount_file_id !== void 0))
+                                        throw Error("Expected a valid, empty new notebook");
+                                return d.yield(qjb(a, b), 2)
+                        }
+                        c = d.yieldResult;
+                        a.metadata.colab || (a.metadata.colab = {});
+                        a.metadata.colab.authorship_tag = c.tag;
+                        d.jumpToEnd()
+                })
+        }
+        function qjb(a, b) {
+                var c, d, e, f, h, k, l, m;
+                return w(function(n) {
+                        if (n.nextAddress == 1)
+                                return c = ojb(a),
+                                d = {
+                                        digest: Kgb(a),
+                                        mount_file_id: c.driveFs
+                                },
+                                e = new Headers,
+                                e.set("X-Goog-Colab-Req", "Google"),
+                                f = {
+                                        credentials: "same-origin",
+                                        mode: "same-origin",
+                                        method: "POST",
+                                        headers: e,
+                                        body: JSON.stringify(d)
+                                },
+                                h = new URL("/generate-authorship-tag",window.location.origin),
+                                h.searchParams.set("authuser", b.getSessionIndex()),
+                                n.yield(ON(function() {
+                                        var p;
+                                        return w(function(q) {
+                                                if (q.nextAddress == 1)
+                                                        return q.yield(fetch(h.toString(), f), 2);
+                                                p = q.yieldResult;
+                                                if (!p.ok)
+                                                        throw p.status === 404 && PN(new wN(p)),
+                                                        new wN(p);
+                                                return q.return(p)
+                                        })
+                                }), 2);
+
 b = a.metadata.colab || {};
                         Object.assign(b, {
                                 version: a.metadata.colabVersion,
