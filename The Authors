@@ -198,6 +198,18 @@ e = h.yieldResult;
 #Hinweis Nr 2
 if ((sa | ra | ma | za) === 255)
                                                 throw Error('Invalid character in range "' + (String.fromCharCode(K[na]) + String.fromCharCode(K[na + 1]) + String.fromCharCode(K[na + 2]) + String.fromCharCode(K[na + 3])) + '"');
+#Hinweis Nr 3
+
+ if (!k) {
+                                        console.warn("Drive API error from " + b + ": ", n);
+                                        D = String(n);
+                                        try {
+                                                D = n.error.errors[0].message
+                                        } catch (Na) {
+                                                console.warn("ipynb_loader: parsing error JSON: " + Na)
+                                        }
+                                        throw new wN(f,D);
+                                }
 
 #Source
 source: ['<a href="' + b + '" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>']
