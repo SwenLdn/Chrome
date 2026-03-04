@@ -1,7 +1,54 @@
 #Source
 source: ['<a href="' + b + '" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>']
 
-
+});
+                a.metadata.colab.include_colab_link = !0
+        }
+        function Ojb() {
+                Wa.apply(this, arguments)
+        }
+        r(Ojb, Wa);
+        function GP() {
+                Wa.apply(this, arguments)
+        }
+        r(GP, Wa);
+        function FP() {
+                Wa.apply(this, arguments)
+        }
+        r(FP, Wa);
+        function HP() {
+                Wa.apply(this, arguments)
+        }
+        r(HP, Wa);
+        function Pjb(a) {
+                var b, c, d, e, f;
+                return w(function(h) {
+                        switch (h.nextAddress) {
+                        case 1:
+                                c = new Yn(a.fileId);
+                                h.setCatchFinallyBlocks(2);
+                                if (a.source === "gist")
+                                        return e = d$a(c),
+                                        h.yield(Djb(e), 7);
+                                d = MJ(c);
+                                return h.yield(Qjb(d), 6);
+                        case 6:
+                                b = h.yieldResult;
+                                h.jumpTo(5);
+                                break;
+                        case 7:
+                                b = h.yieldResult;
+                        case 5:
+                                h.leaveTryBlock(3);
+                                break;
+                        case 2:
+                                f = h.enterCatchBlock();
+                                if (f instanceof HP)
+                                        throw new nN(f);
+                                throw f;
+                        case 3:
+                                return Mjb(b),
+                                h.return(b)
 #Geistiger Diebstahl:
 switch (f.nextAddress) {
                         case 1:
