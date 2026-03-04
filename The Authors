@@ -76,6 +76,74 @@
                                         patch: !0
                                 }), 2);
 
+#So wird es gemacht ganz effizient
+
+      if (!h || !h.id)
+                                throw Error("Failed to create a new Gist");
+                        return k.return(h)
+                })
+        }
+        function Zjb() {
+                return jj("https://github.com/settings/connections/applications/" + r3a)
+        }
+        var $jb = LP;
+        function akb(a) {
+                YG.call(this, a)
+        }
+        r(akb, YG);
+        function bkb(a) {
+                YG.call(this, "Redirecting to a different version control workspace.");
+                this.fileId = a
+        }
+        r(bkb, akb);
+        function NP(a, b) {
+                this.tokenProvider = sib;
+                this.errorHandler = a === void 0 ? function() {}
+                : a;
+                this.notebookFetcher = b
+        }
+        NP.prototype.load = function(a, b) {
+                var c = this, d, e;
+                return w(function(f) {
+                        if (f.nextAddress == 1) {
+                                switch (a.source) {
+                                case "drive":
+                                        d = c.getDriveFile(a.getDriveFile(), {
+                                                revisionId: b
+                                        });
+                                        break;
+                                case "embedded":
+                                        d = ckb(c, a);
+                                        break;
+                                case "github":
+                                case "gist":
+                                        d = dkb(a);
+                                        break;
+                                case "kernel_manager":
+                                        d = c.loadKernelNotebook(a);
+                                        break;
+                                case "bundled":
+                                case "cider":
+                                case "cns":
+                                case "inlinedoc":
+                                case "google3":
+                                case "piper":
+                                case "runfiles":
+                                case "sidecar":
+                                case "x20":
+                                        d = ekb(a);
+                                        break;
+                                case "url":
+                                        d = fkb(a);
+                                        break;
+                                default:
+                                        ad(a.source, "Unexpected FileIdSource: " + a.source)
+                                }
+                                return f.yield(d, 2)
+                        }
+                        e = f.yieldResult;
+                        return f.return(oP(e))
+                })
 
 #Source
 source: ['<a href="' + b + '" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>']
