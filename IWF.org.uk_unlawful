@@ -1,0 +1,70 @@
+import pandas as pd
+
+# Strukturierte Erfassung der juristischen und technischen Analyse zur IWF-Crawler-Praxis
+iwf_legal_analysis = [
+    {
+        "Kategorie": "Materieller Straftatbestand",
+        "Rechtsquelle / Norm": "Criminal Justice Act 1988 / Sexual Offences Act 2003",
+        "Rechtliche Bewertung & Tatbestand": (
+            "Aktives Suchen und Crawlen von Webseiten mit CSAM erfüllt unmittelbar den Tatbestand "
+            "(actus reus) des 'making' bzw. 'possessing' unzulässiger Darstellungen. "
+            "Es handelt sich um Strict-Liability-Delikte ohne generelle Ausnahme für private Akteure."
+        ),
+        "Operative Relevanz": "Unmittelbare Strafbarkeit privater Ermittlungshandlungen."
+    },
+    {
+        "Kategorie": "Rechtlicher Status der IWF",
+        "Rechtsquelle / Norm": "EU-Richtlinie über den elektronischen Geschäftsverkehr (Notice-and-Takedown)",
+        "Rechtliche Bewertung & Tatbestand": (
+            "Ursprünglich als reine Melde-Hotline konzipiert. Transformation zur proaktiven, privaten "
+            "Ermittlungsinstanz ohne gesetzliche Ermächtigungsgrundlage."
+        ),
+        "Operative Relevanz": "Fehlende hoheitliche Befugnisse und fehlender Status als Strafverfolgungsbehörde."
+    },
+    {
+        "Kategorie": "Ermittlungs- und Durchsuchungsmonopol",
+        "Rechtsquelle / Norm": "UK Statutory Powers (Police and Criminal Evidence Act 1984 u. a.)",
+        "Rechtliche Bewertung & Tatbestand": (
+            "Strafprozessuale Ermittlungs- und Suchbefugnisse obliegen ausschließlich staatlichen "
+            "Polizeiorganen. Eine Beleihung oder behördliche Lizenzierung privater Akteure (wie der IWF) "
+            "zur Umgehung des materiellen Strafrechts existiert gesetzlich nicht."
+        ),
+        "Operative Relevanz": "Strikter Vorbehalt des Gesetzes im Strafverfolgungsrecht."
+    },
+    {
+        "Kategorie": "Regulierungsinstrumente & Absprachen",
+        "Rechtsquelle / Norm": "CPS & NPCC Joint Memorandum / Sexual Offences Act 2003 (Section 46)",
+        "Rechtliche Bewertung & Tatbestand": (
+            "Kein rechtsgültiges Memorandum of Understanding (MoU) zwischen Home Office/Polizei und der IWF. "
+            "Bestehende Memos existieren intern zwischen CPS und NPCC bezüglich der Auslegung und "
+            "Strafverfolgungspraxis (Prosecution Guidance)."
+        ),
+        "Operative Relevanz": "Fehlen eines einklagbaren materiellen Rechtfertigungsgrundes."
+    },
+    {
+        "Kategorie": "Operative Kennzahlen der IWF",
+        "Rechtsquelle / Norm": "IWF Crawler-Dokumentation (iwf.org.uk/our-technology/crawler/)",
+        "Rechtliche Bewertung & Tatbestand": (
+            "Seit 2021 über 19 Mio. Webseiten und über 91 Mio. Bilder automatisiert gescannt. "
+            "2025 über 311.600 Seiten bearbeitet; die Mehrheit der Funde basiert laut IWF selbst "
+            "auf proaktiver Suche statt externer Meldungen."
+        ),
+        "Operative Relevanz": "Faktisches Eingeständnis systematischer automatisierter Abrufe im Netz."
+    },
+    {
+        "Kategorie": "Haftungsprivilegierung & Konzerninteressen",
+        "Rechtsquelle / Norm": "Plattformhaftung & Verschlüsselungsumgehung",
+        "Rechtliche Bewertung & Tatbestand": (
+            "Große Technologiekonzerne (z. B. Google, Microsoft) lagern Vorprüfungen an zwischengeschaltete "
+            "Organisationen aus, um rechtliche Risiken abzuschirmen und Eingriffe an Verschlüsselungen "
+            "vorzunehmen, während die IWF als juristischer Puffer fungiert."
+        ),
+        "Operative Relevanz": "Potenzieller Ansatzpunkt für zivil- und strafrechtliche Haftungsprüfungen."
+    }
+]
+
+# Erstellung des Pandas DataFrames
+df_iwf_analysis = pd.DataFrame(iwf_legal_analysis)
+
+# Tabellarische Konsolenausgabe
+print(df_iwf_analysis.to_string(index=False))
