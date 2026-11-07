@@ -1,0 +1,94 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "meta": {
+    "title": "Überwachungskapitalismus: Wie die Hubert Burda Media die Menschenrechte mit digitalen Mitteln aushebelt",
+    "subtitle": "Eine Grundrechtsverletzung im digitalen Wohnzimmer wird nicht dadurch rechtmäßig, dass man ein Formular mit EU-Reizwörtern garniert.",
+    "author": "SWEN WERNER",
+    "recipient": {
+      "entity": "Hubert Burda Media",
+      "emails": [
+        "info@hubert-burda-media.com",
+        "compliance@burda.com"
+      ],
+      "attention": "Herr Dr. Maximilian Preisser, Vorstand",
+      "address": "Arabellastraße 23, 81925 München"
+    },
+    "case_reference": "Hubert Burda Überwachungskapitalismus (HBÜ)",
+    "verification_token": "80788265"
+  },
+  "normative_contradiction": {
+    "corporate_commitment": {
+      "declaration": "Grundsatzerklärung zur Achtung der Menschenrechte bei Hubert Burda Media (27. Januar 2026)",
+      "cited_standards": [
+        "Allgemeine Erklärung der Menschenrechte der Vereinten Nationen (AEMR)",
+        "Europäische Konvention zum Schutze der Menschenrechte und Grundfreiheiten (EMRK)"
+      ],
+      "commitments": [
+        "Untersuchungspflicht bei Verdacht oder konkretem Hinweis auf Menschenrechtsverletzungen durch Geschäftsaktivitäten",
+        "Ermutigung zur Meldung menschenrechtlicher Bedenken durch Mitarbeiter, Kunden und Interessengruppen"
+      ]
+    },
+    "operational_reality": "Einsatz von Tracking- und Profilierungsarchitekturen über Konzerntöchter (BurdaForward GmbH, BCN Brand Community Network GmbH) auf Plattformen wie TVSpielfilm.de, Focus Online, Chip.de und Teleschau, die fundamentale Persönlichkeits- und Menschenrechte verletzen."
+  },
+  "technical_forensics": {
+    "vendor": "BurdaForward GmbH",
+    "technology_stack": "Snowplow Analytics (Enterprise Behavioral Data Platform)",
+    "cookie_identifiers": [
+      {
+        "cookie_name": "_snow_id",
+        "functional_role": "Langzeit-Tracker",
+        "lifespan": "Persistent / 30 Minute(n) deklariert",
+        "mechanism": "Vergabe einer eindeutigen Browser-ID zur persistenten Wiedererkennung des Nutzers über Tabs und System-Neustarts hinweg."
+      },
+      {
+        "cookie_name": "_snow_ses_id",
+        "functional_role": "Session-Tracker",
+        "lifespan": "30 Minuten Inaktivität",
+        "mechanism": "Lückenlose Rekonstruktion des Bewegungspfads (Klicksequenz, Latenz/Zögern, Absprungpunkte)."
+      },
+      {
+        "cookie_name": "_snow_pv_id",
+        "functional_role": "Page-View-Tracker",
+        "lifespan": "30 Minuten",
+        "mechanism": "Korrelation von Mikrointeraktionen (Klicks auf Werbebanner, Videostarts) mit der exakt aufgerufenen Unterseite."
+      }
+    ],
+    "classification_abuse": {
+      "declared_category": "Unbedingt erforderliche Cookies",
+      "legal_definition": "Ausschließlich technisch zwingend notwendige Funktionen für den Betrieb der Seite (z.B. Warenkorb, Sprachauswahl).",
+      "evaluation": "Rechtsmissbräuchliche Umdeklaration von kommerziellem Verhaltens-Tracking zu essenziellen Funktionen."
+    },
+    "biometric_and_device_fingerprinting": {
+      "behavioral_dynamics": "Erfassung von Tipp-Geschwindigkeit, Anschlagsrhythmus, Mausdynamik und Scroll-Verhalten (Wiedererkennungsgenauigkeit > 95% ohne traditionelle Identifikatoren).",
+      "hardware_fingerprint": "Vollständige Vermessung von Hardware-Eigenschaften, installierten Schriften und GPU-Rechenleistung zur Erzeugung einer deterministischen Geräte-DNA."
+    },
+    "evasion_technologies": [
+      "Server-Side-Tracking zur Umgehung von Browser-basierten Ad-Blockern und Drittanbieter-Sperren",
+      "Hashing von E-Mail-Adressen zur anwendungsübergreifenden Synchronisation im IAB-Netzwerk",
+      "Cross-Site-Persistenz über consentUUID und euconsent-v2"
+    ]
+  },
+  "legal_and_philosophical_arguments": [
+    {
+      "argument_id": "ARG_01",
+      "topic": "Illusion der Pseudonymisierung (Singling Out)",
+      "content": "Die Behauptung, Daten seien durch IDs wie _snow_id pseudonymisiert und daher datenschutzkonform, ist technisch verfehlt. Für algorithmische Systeme ist die eindeutige Individualisierbarkeit ('Singling Out') identisch mit Klarnamen-Identifikation."
+    },
+    {
+      "argument_id": "ARG_02",
+      "topic": "Instrumentalisierung von Regulierungslücken & Informationsasymmetrie",
+      "content": "Die Industrie nutzt das 'berechtigte Interesse' und die Flutung von Nutzern mit undurchschaubaren Einwilligungsdialogen (Dark Patterns) gezielt aus, um das Schutzziel der DSGVO/ePrivacy zu unterwandern."
+    },
+    {
+      "argument_id": "ARG_03",
+      "topic": "Art. 12 AEMR (Schutz der Privatsphäre)",
+      "content": "Art. 12 AEMR verbietet willkürliche Eingriffe in das Privatleben. Ein Eingriff ist willkürlich, wenn durch Informationsasymmetrie und manipulative UI/UX-Muster (Dark Patterns) die Möglichkeit einer freien, informierten Entscheidung systematisch eliminiert wird."
+    },
+    {
+      "argument_id": "ARG_04",
+      "topic": "§ 25 Abs. 1 TDDDG & Wesensgehalt des Grundgesetzes",
+      "content": "Das ungefragte Auslesen von Endgerätedaten entspricht dem unbefugten Aufstellen einer Überwachungskamera im privaten Wohnzimmer. Hierfür kann es keine rechtswirksame Einwilligung geben; die Praxis verletzt den unantastbaren Wesensgehalt der Privat- und Intimsphäre."
+    }
+  ],
+  "synthesis": "Die Diskrepanz zwischen der feierlichen Grundsatzerklärung zur Achtung der Menschenrechte und der tatsächlichen Implementierung von Snowplow-Biometrie, Geräte-Fingerprinting und manipulativen CMP-Mechanismen begründet den Vorwurf eines institutionalisierten, rechtsmissbräuchlichen Überwachungskapitalismus."
+}
