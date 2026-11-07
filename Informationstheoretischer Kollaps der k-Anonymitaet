@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Informationstheoretischer Kollaps der k-Anonymitaet bei Doppelstaatlern (UK/DE)",
+  "metadata": {
+    "transit_route": "LHR -> FRA",
+    "vessel_type": "Airbus A321neo",
+    "passenger_count_approx": 210,
+    "target_cohort": "Doppelstaatler (UK/DE)"
+  },
+  "mathematical_framework": {
+    "passenger_set": {
+      "symbol": "P",
+      "cardinality": "N = |P| ≈ 210"
+    },
+    "state_vectors": {
+      "origin": {
+        "checkpoint": "LHR (London Heathrow)",
+        "system": "MTA-System der Airline",
+        "declared_attribute": "Britischer Pass (UK)",
+        "vector_symbol": "X_LHR"
+      },
+      "destination": {
+        "checkpoint": "FRA (Frankfurt am Main)",
+        "system": "EasyPass-Automat",
+        "declared_attribute": "Deutscher Personalausweis (DE)",
+        "vector_symbol": "X_FRA"
+      }
+    },
+    "symmetry_break": {
+      "phase_shift_symbol": "ΔΦ",
+      "transition_formula": "X_LHR -> X_FRA => ΔΦ != 0",
+      "description": "Asymmetrische Verschiebung in den unverbundenen Zaehldaten der Behoerden"
+    }
+  },
+  "collapse_of_k_anonymity": {
+    "complexity": "O(1)",
+    "paradox": "Trotz formaler DSGVO-Zertifizierung und Fehlen direkter PII (Klarnamen, Ausweisnummern) kollabiert der Suchraum in modernen Data Lakes (graphenbasiert / Schema-on-Read).",
+    "probability_singularity": {
+      "formula": "P(P_ident | ΔΦ) -> 1.0 <=> |Schnittmenge der unstrukturierten Wellen| = 1",
+      "interpretation": "Eindeutige Identifikation durch Phasenverschiebung im diskreten Gitter"
+    }
+  }
+}
